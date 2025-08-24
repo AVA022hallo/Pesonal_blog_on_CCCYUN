@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1>并不是技能简单的工作将来你做起来就会简单</h1>
+            #'
+updated: 2025-02-18T20:40:25
+created: 2025-02-18T20:39:42</h2>
+<p>作者：q9adg
+链接：https://www.zhihu.com/question/311483478/answer/1913160256
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+<p>不考虑别的因素的话，直升机简单。
+这主要是因为现代直升机的<a href="https://zhida.zhihu.com/search?content_id=377931700&amp;content_type=Answer&amp;match_order=1&amp;q=%E9%A3%9E%E6%8E%A7%E7%B3%BB%E7%BB%9F&amp;zhida_source=entity">飞控系统</a>非常强，有很强的<a href="https://zhida.zhihu.com/search?content_id=377931700&amp;content_type=Answer&amp;match_order=1&amp;q=%E8%87%AA%E6%88%91%E5%AE%89%E5%AE%9A%E5%8A%9F%E8%83%BD&amp;zhida_source=entity">自我安定功能</a>。单纯从起飞降落和加速减速这些纯操作而言，直升机远比固定翼简单——比如它几乎不会有<a href="https://zhida.zhihu.com/search?content_id=377931700&amp;content_type=Answer&amp;match_order=1&amp;q=%E6%A1%B6%E6%BB%9A%E7%8E%B0%E8%B1%A1&amp;zhida_source=entity">桶滚现象</a>，也不需要学习固定翼必须学的机场起飞降落操作。
+说得直白一点——民用直升机，尤其是<a href="https://zhida.zhihu.com/search?content_id=377931700&amp;content_type=Answer&amp;match_order=1&amp;q=%E9%80%9A%E5%8B%A4%E7%B1%BB&amp;zhida_source=entity">通勤类</a>的，是奔着高级电梯的方向在发展的。工程师憋着一口气——有本事你把电梯开坏。而即使是<a href="https://zhida.zhihu.com/search?content_id=377931700&amp;content_type=Answer&amp;match_order=1&amp;q=%E5%86%9B%E7%94%A8&amp;zhida_source=entity">军用</a>的、其他<a href="https://zhida.zhihu.com/search?content_id=377931700&amp;content_type=Answer&amp;match_order=1&amp;q=%E7%89%B9%E7%A7%8D%E4%B8%93%E7%94%A8&amp;zhida_source=entity">特种专用</a>的，也会大量引用这种成果。</p>
+<p>问题是，恰恰因为它操作更简单，直升机总是担当非常困难的任务。比如<a href="https://zhida.zhihu.com/search?content_id=377931700&amp;content_type=Answer&amp;match_order=1&amp;q=%E5%A4%8D%E6%9D%82%E5%9C%B0%E5%BD%A2%E6%90%9C%E6%95%91&amp;zhida_source=entity">复杂地形搜救</a>，<a href="https://zhida.zhihu.com/search?content_id=377931700&amp;content_type=Answer&amp;match_order=1&amp;q=%E9%9A%90%E8%94%BD%E7%AA%81%E8%A2%AD&amp;zhida_source=entity">隐蔽突袭</a>，恶劣气候条件下低空飞行和悬停，在城市复杂地形里穿梭作业。
+这些地方地形障碍和空气乱流要远比固定翼飞机要面对的情况复杂。
+而恰恰因为固定翼飞机操作太难，所以它的作业任务往往以安全为上。基本上是只管飞高点，直线前进，从A机场到B机场，机场都有严格的管理净空来保证你安全。
+这俩一抵消，最后的实际风险反而可能是直升机大。</p>
+<p>说这些是啥意思呢？
+意思就是最后总有这规律——<strong>并不是技能简单的工作将来你做起来就会简单</strong>。
+最终的实际分工，一定会把技能简单、结果可靠的工作，安排去做强度极大或者难度更大的事情。
+而反过来，==技巧性越高、越是复杂的事情，往往被设计去做最安全、最基本的操作，尽可能不冒险。==
+所以在你还在学习阶段的时候，要记住这一点——==学得越多、越深，越好==。
+绝不会因为你学得浅，这操作简单，将来放在你面前的工作就会相应的简单和轻松。
+<strong>事实恰恰会是相反的。</strong></p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

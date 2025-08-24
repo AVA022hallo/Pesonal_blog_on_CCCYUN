@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1>习惯</h1>
+            #
+这又是一个极好的问题。
+习惯和瘾有显而易见的深刻的同质性。
+这时一般人去区分习惯和瘾，就会用上传统的“程度大法”——
+“戒断反应低于一定程度的就是习惯～～高于一定程度的就是瘾～～”
+“养成门槛高到一定程度的就是习惯～～养成门槛低到一定程度的就是瘾～～”
+“程度”在哪？天知道。
+这种“程度大法”实质上已经等于把这话说出来了——“其实瘾就是一种习惯，习惯就是一种瘾”。
+但这是不对的。
+习惯和瘾作为同样有戒断反应、同样有养成条件的强迫性行为模式，它们的本质区别，在于<strong>瘾有扩张性，而习惯只有维持性。</strong>
+<strong>瘾是永远饥渴的，而习惯是满足的。</strong>
+为什么我会花时间回答这个问题呢？
+因为这里面存在一个关键的顶层<a href="https://www.zhihu.com/search?q=%E7%AD%96%E7%95%A5&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22:%22answer%22%2C%22sourceId%22:1320747151%7D">策略</a>问题——人要理性的、策略的建构自己的习惯和瘾。
+是的，<strong>不是要去除瘾，而是要通过深思熟虑，将它安排在一个合适的位置上</strong>。
+这个策略有一个非常简单的表述——
+<strong>把一切人生中维持性的事务构建成习惯；把人生中进取性的价值追求构建成瘾。</strong>
+<strong>它们的完成应该如此的自动和透明，以至于它们的完成几乎不会占据你的注意力。</strong>
+就像你早上出门时有时会疑惑“我刷牙了吗“这样。
+只有它们的未完成才会引起你的注意。
+而你的价值追求，应该如同成瘾一般。
+它牢牢地占据你极大的主观注意力，每一点<a href="https://www.zhihu.com/search?q=%E8%A7%81%E7%BC%9D%E6%8F%92%E9%92%88&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22:%22answer%22%2C%22sourceId%22:1320747151%7D">见缝插针</a>的时间、每一分闲余的精力都会被毫不留情的抓来，用来创造和享受这个过程，甚至连结果都没那么重要了。
+念念不忘。
+瘾不是问题，真正的问题是你对什么上瘾，这个瘾的附加效应是什么，这些效应是否伤人。</p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

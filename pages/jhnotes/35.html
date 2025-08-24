@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1>35</h1>
+            #'
+updated: 2023-12-15T23:20:49
+created: 2023-12-15T23:20:39</h2>
+<p><strong>35</strong>
+Tags:<strong>Clan</strong>
+35 岁分界线在政策、婚育、职场里无处不在， 为什么35 岁成了「中国式中年」的开端？
+这事很自然啊。
+基本上，社会默认为35岁以上的人理应将照顾家庭视为重要的义务，工作也要为家庭让步。全自动的认定35岁以上的人只适合做一些特定的成人的工作。一些年轻人的工作就不招了。
+这也是在警告低于35岁的人不要挥霍自己的变轨机会——小孩不能当到老。
+在35岁之前你必须严肃的积累一些能保证你在35岁之后能依靠的真功夫、真人脉，而不是一直自欺欺人过家家、做春梦。
+没有这根deadline，有些人是真的可以玩一辈子双脚不着地的。
+这个世界是<strong>完全严肃</strong>的，它充满幽默，尤其酷爱黑色幽默，但它从来也没跟你开玩笑。
+到了deadline，你就知道什么是纸做的，什么是铁做的。
+从另一个角度来说，尤其是公家机关做这个年龄限制其实无疑是对年轻人是有利的。
+这些限制主要是阻碍了35岁以上的人和年轻人竞争初级岗位。坦率讲，如果不限制，这些额外的竞争一定会压低薪资水平、抬高入职门槛。
+别做“工资一样，资本家一定更喜欢年轻人能熬夜”的梦。工资如果一样，35岁心态稳健、人格成熟的资深员工比二十几岁小朋友恨不得一个可以顶两三个。
+这是给年轻人留机会、留饭碗。就像设立退休年龄是给中年人留机会，留饭碗一样。
+你难道真以为“老领导”到5、60岁就老糊涂了？
+这是给你们的福利，居然有些小孩跟着别人一起喷，实属不知好歹。</p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

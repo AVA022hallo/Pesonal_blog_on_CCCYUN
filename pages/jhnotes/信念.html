@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1>信念</h1>
+            #</p>
+<p>==信念只会是没有可证伪性的命题。==
+比如“神存在”，比如“正义必胜”，比如善有善报”。==因为没有可证伪性，这类命题面对一切疑似现实反例总是可以做出足够的解释和调和，可以做到既坚持相信、又不必脱离现实。==
+执念是有可证伪性、但你承受不起它被证实错误的代价的命题。比如“美国不可战胜”、“民主国家之间不可能发生战争”、“张三永远爱我”等等。
+因为你无法承受它被证实错误的代价，于是你只能通过否定那些反面证据的真实性的方法来解决问题。这样一否定，你和世界的现实就脱离了。
+一旦发生这种分离，你就会和跟随现实的人发生越来越大的根本分歧。这就像车上有两个人，一个觉得眼前看明明是平路，另一个却觉得明明是悬崖，车还在高速前进。可想而知，这两方必然要发生激烈的矛盾。不是要争抢方向盘，导致汽车蛇行，就是一方要跳车，自己单独前进。
+而这个时候，现实到底站在谁那一边，那一边会有大得多的生存优势。
+一眼以蔽之，没有可证伪性的才可以由得你自己放心大胆的信奉，那是你的选择。
+有可证伪性的你必须有planB。反正我有planB，即使事实就是这样也不会根本性的影响我的积极发展，我就没必要避讳它的可能性，恰恰相反，我倒是很感兴趣它到底是不是真的，因为提前确知要启动planB总比滞后启动要有赚头，这样才能一直保持真正的开放心态。
+或者不如反过来说，==你之所以可以确信自己中立客观，根本的依据就在于你有一个完善的、同样令你跃跃欲试的planB==。当你的PlanB本身就令你自己恐惧和厌恶，那么你的立场也就自然而然不够中立。
+注意，这不是一个非黑即白的问题，而是随着你对PlanB的感情有着从极左出发经过中立直到极右的整个“态度域”。
+很显然，要手头时刻紧握两个同样喜欢的计划以保证自己的绝对客观心态是非常困难的，于是这要靠你先建设起一种“==无论循哪条路径到达终点都一样好==”的心理结构，这可以保证你在终极意义上的客观性基准。
+而获得这个基准，就可以相当彻底的解决“执念”问题。
+微妙的是，能帮助你超越对具体路径的依赖心的，恰恰正是信念范畴内的各种命题。
+换言之，信念即执念的解。</p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

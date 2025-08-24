@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1>戒慎恐惧</h1>
+            #
+谨言慎行，是指不该自己评价的事情不要胡乱开口，不该自己干预的事情不要随便越界。
+畏首畏尾，是指该自己作为的时候软弱、逃避，该自己下决断的时候拖延、犹豫。
+一个是不该做的时候做不做，一个是该做的时候做不做。
+一个是在处理别人的权利的时候负不负责任，一个是在处理自己的义务的时候负不负责任。
+一个是侵不侵犯别人，一个是辜不辜负自己。
+做不到谨言慎行，往往是意识不到别人对自己的权利有多看重，对侵犯自己权利的行为有多痛恨。别说合理合法的权益了，老实说连不合理、不合法的权利，他人也是拿着机关枪守卫的。
+因此做什么事，一定要对这个做法是否触动到了ta人的利益有清楚的意识，而不要随便假定“没事”、“不至于”。这不是说涉及到别人的利益就不能干，而是你要准备好赔偿对方的利益损失、或者准备抵御、击败别人的反击。
+而畏首畏尾，往往是意识不到不作为的后果更严重，或者更隐蔽的——幻想可以通过无意识的表演“无助感”骗到某个大哥大姐爷爷奶奶来帮忙。
+其实这种“演技”还真的常常奏效——畏首畏尾固然惹人厌憎，但经常真的可以引诱某些大哥大姐出手相救，获得现实利益。
+问题是，这种姿态会取消你<strong>作为成人获得尊重和信赖的资格</strong>。
+没有这个尊重和信赖，你是不能长期获得订单和支付的，也不可能有什么“稳定的收入预期”，于是你很难建立和支撑亲密关系。到时候你又要喊寂寞孤独、没人尊重。
+<strong>畏首畏尾没有什么可以指望的好处</strong>，这没什么分寸问题，而是一个觉悟问题。
+“畏首畏尾”就像一张彩票，但是要用人格来买。
+抽不抽得到现金，不一定，但是只要你抽，就一定会人格受损。
+永远记得这一点，你以后就不会这么能容忍自己畏首畏尾了。</p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

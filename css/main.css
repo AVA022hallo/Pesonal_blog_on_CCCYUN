@@ -1,0 +1,9 @@
+
+/* 主内容区域 */
+main {
+    flex: 1;
+    padding: 20px;
+    margin-left: 20px; /* 给主内容区域留出足够的空间 */
+}
+
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1>眼中的光</h1>
+            #
+星期五, 十二月 1, 2023
+7:32 下午</p>
+<p>已剪辑自: <a href="https://www.zhihu.com/question/461148180/answer/2697824362">https://www.zhihu.com/question/461148180/answer/2697824362</a>
+这事其实很俗气。
+那就是要<strong>赢</strong>。
+要存活、要解决问题、要拿到结果、要办成事。
+要笑到最后。
+要养成办成事的习惯。
+最后养成赢的习惯。</p>
+<p>你总是输、总是逃、总是半途而废，你当然眼里没光了。
+你凭什么要输？凭什么要逃？凭什么要半途而废？</p>
+<p><strong>眼里没光，是人沉迷自欺欺人而不自省的自然惩罚</strong>。
+自欺欺人，就<strong>总是<a href="https://www.zhihu.com/search?q=%E5%A5%BD%E9%AB%98%E9%AA%9B%E8%BF%9C&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22:%22answer%22%2C%22sourceId%22:2697824362%7D">好高骛远</a>，总是半途而废，总是自找借口。循环往复，从失败走向失败。</strong>
+越输，越想一仗翻身，越要赌个更大的。
+越赌个大的，越输得彻底、输得没有悬念。
+输了又输，而且打死不改，你凭什么眼里该有光？</p>
+<p>该办成的事，就要办成，还要办得漂漂亮亮。
+事情办漂亮了，你自然而然眼睛里就有光。
+<strong>没办好，那就老老实实的总结问题，然后解决问题。</strong>
+做人老老实实，脚踏实地，事情办得稳妥漂亮就自然而然会是一个常态。
+你办不了的你不会乱抓，你办得了的自然极少失手。
+极少失手，自然总是办成，自然总是赢。
+总是办成，总是赢，有什么“眼里没光”？</p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

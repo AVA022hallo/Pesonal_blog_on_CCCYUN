@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1>割地求和</h1>
+            #
+很多人的想法是，我要画出一个边界，然后告诉那些无意间迈过边界的人“你过界了”，这样我就建立了边界感。
+基于这个框架，我要了解边界怎么画、怎么通知越界者这两门技术，这样就可以完成这个计划了。
+其实这个想法是错的。
+因为这个框架的运营成本太高了。
+更简单的手段，是把这些画边界、盯监视器、发通知的精力极大的节省出来，转向锻炼自己创造价值的能力，积累自己创造开值的战例。
+<strong>让每一个接近你的人自己小心翼翼，去谨防自己乱说乱动把自己从你这里受益的机会搞丢了。</strong>
+这样你“定义边界”的技术要求会大幅下降——你不需要关心“一般大众标准”是什么。不好意思，在下平一指，生性怪癖多，你要来解毒治伤，你跟我争一下“别处都没这规矩”试试？
+盯监视器的负担也会大幅下降——人家会自己小心翼翼，生怕越界，只要任何一点可能有任何一种人可能介意，对方都会为了保险起见尽量避嫌。宁可站在纯白色安全区，带一丁点灰色的地区都不敢涉足。
+发通知的有效性也会大幅提升——真遇到什么过界的事，你提醒一次，对方会拿块花岗岩雕成石碑竖在自己大门口，天天复习，极少有谁会白目到“屡教不改”。
+先从战略高度解决根本问题，然后再用战术性手段处理残余问题。
+成为卓有成效的、名声显赫的净输出者，你敞开城门，一样固若金汤。
+如果你不是净输出者，甚至反而是净输入者，那么你的边界画在哪都没用，和你打交道的人必然要再多占一块地来补偿自己的损失。
+你出不起钱，你就注定要割地求和。</p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

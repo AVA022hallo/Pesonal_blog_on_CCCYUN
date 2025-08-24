@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1>信仰生命</h1>
+            #
+这个问题并不简单。
+首先，你的信仰客观上一定是错的。
+因为人根本就不能看到无限久远的未来和讨论一切具体情况。因此，无论你的<a href="https://www.zhihu.com/search?q=%E4%BF%A1%E4%BB%B0&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22:%22answer%22%2C%22sourceId%22:603154453%7D">信仰</a>的语言表述如何，你的信仰的实际内容必然在某种程度上存在错误。因此从实质上、绝对的意义上说，你的信仰一定是一个错误的东西。
+其实无论你相信什么，都不能改变这一事实。
+这也是人生最大的困境。
+为什么呢？因为作为人生的最高指导方针，你一旦发现其错误，就不能不修正，并且导致一系列决策的推翻和更改。每一次做这样的更改，都会导致大量的善后工作和沉重的、现实的代价。原本你相信是正义的东西，在更新的信仰之下突然变成了显然邪恶的东西。于是很自然，为了建立它而行的事业也就突然变成了不但要立刻停止，甚至要尽快拆毁、弥补的罪业。
+这种困境无休无止，没有尽头。你不摆脱它，你将永远处在准备改弦易辙的投机焦虑之中。对任何你当前的事业，你都不舍得也不敢下太大的本钱。事复一事，日复一日，年复一年，你手里本来丰厚的本钱都被拆成了五分一毛丢进无关痛痒的儿戏之中去了。很多时候你甚至都会觉得荒谬——你时常在赌完全互相矛盾的两种方案，以至于必然有一半会输掉另一半所可能得来的一切利润。
+<strong>你最终将被迫选择一条你不能不选择的道路——固执一端，有死而已。</strong>
+我选了这个，大不了死逑去。
+做了这样的选择，则它的“错误”就失去了实际威胁。你于是才可以真正稳定的坚持。才有可能有实际有效的恒心与毅力可言，才有可能真的建立点什么东西。
+虽然那东西混身是毛病，但好歹会是个东西。
+你留下了点东西，它好的一面可以启发人、帮助人，它坏的一面可以警示人、提醒人，于是你也就没有白活，于是你的生命才经由人类的历史而长存。
+你才算活着了。
+所以，<strong>“为了信仰而死”，其实是一种活法。</strong>
+很显然，这里的死不是指着“引刀成一快”，在绝大多数情况下，是指<strong>好几十年为一个主题而进行的、至死方休的“<a href="https://www.zhihu.com/search?q=%E7%9F%A5%E5%85%B6%E6%81%90%E4%B8%8D%E5%8F%AF%E4%B8%BA%EF%BC%8C%E8%80%8C%E5%8B%89%E4%B8%BA%E4%B9%8B&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22:%22answer%22%2C%22sourceId%22:603154453%7D">知其恐不可为，而勉为之</a>”。</strong>
+你是不能不选的，唯一的差别是你最终所选择固守的东西，必须要<strong>真正的在逻辑上不可拆毁</strong>。
+也就是<strong>自洽</strong>且具有<strong>确定无疑的不可证伪性</strong>。
+因其自洽，你可以不必焦虑将来会自相矛盾而自我<a href="https://www.zhihu.com/search?q=%E6%8B%86%E6%AF%81&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22:%22answer%22%2C%22sourceId%22:603154453%7D">拆毁</a>——至少不会全部拆毁，而只是不破不立的螺旋上升。
+因为你永远没有会被彻底证明错误的一天——不是因为你回避批评、讳疾忌医，而是逻辑本身没有这个能力。</p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

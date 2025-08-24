@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1>专业布局</h1>
+            #
+星期五, 十二月 1, 2023
+7:05 下午</p>
+<p>已剪辑自: <a href="https://www.zhihu.com/question/51381555/answer/795382830">https://www.zhihu.com/question/51381555/answer/795382830</a>
+总的来说，我比较反对你在本科阶段过于重视“专业布局”。
+世界变化太快，现在没有人能预测四五年那么久的未来的准确格局。这已经是一个需要清醒认识的常态了。
+唯一确定的，就是不确定。
+在后一两年多抽时间去看行业展会，和展会上的工作人员多聊天。现在中国也是世界的重要舞台，不少国际大展也会到北上广深来走一站。展会工作人员自己就是各家一线厂商的员工，而且身负介绍最新产品的责任，他们要比一般<a href="https://www.zhihu.com/search?q=%E7%9F%A5%E4%B9%8E%E4%BC%97&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22:%22answer%22%2C%22sourceId%22:795382830%7D">知乎众</a>更接近产业现实。不妨多跟他们交流一下。
+<img src="../../resources/466f807b928043f0a4854ad480610c37.jpg" alt="image1"></p>
+<p>实际上这是同一个问题。将来运动控制的主要方面按我的估计应该不会是机械机电方面，而恰恰是一个人工智能问题。
+最典型的就是通过对实时建模出来的复杂环境信息作出行动决策，以及对行动决策执行时的意外情况作出反应决策。这两个决策才是机器人运动控制在目前最大的困难，而不是在机械部分对信号部分的响应上。
+后者的关键点已经不太是一个<a href="https://www.zhihu.com/search?q=%E6%9C%BA%E7%94%B5&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22:%22answer%22%2C%22sourceId%22:795382830%7D">机电</a>问题，而更多的是材料学问题。不是得不到信号，而是没有更轻、更结实、更耐用的材料来达成更快的动作。现在前沿纷纷在做的，往往是热敏或者电敏的<a href="https://www.zhihu.com/search?q=%E4%BA%BA%E9%80%A0%E8%82%8C%E8%82%89&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22:%22answer%22%2C%22sourceId%22:795382830%7D">人造肌肉</a>这一类。再就是更灵敏和稳定的传感器这一类。
+刚才说的决策问题才是机器人运动控制的最困难的问题，而这些恰恰本身就是人工智能问题。只要硬件给你确定的性能指标，你几乎不太需要在意机械部分。
+即使是机械部分，高复杂度的<a href="https://www.zhihu.com/search?q=%E6%9C%BA%E6%A2%B0%E7%B3%BB%E7%BB%9F&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22:%22answer%22%2C%22sourceId%22:795382830%7D">机械系统</a>的设计的核心也是发现隐藏在千万个零件之中的系统薄弱点——比如大量<a href="https://www.zhihu.com/search?q=%E5%8F%91%E7%83%AD%E4%BB%B6&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22:%22answer%22%2C%22sourceId%22:795382830%7D">发热件</a>相对集中造成的过热点，或者在某些极端工况下会造成的零件动作互相干扰等等。那也会慢慢的变成一个人工智能问题。
+构造优化算法和决策体系会是将来的一个最普遍的<a href="https://www.zhihu.com/search?q=%E4%B8%87%E9%87%91%E6%B2%B9&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22:%22answer%22%2C%22sourceId%22:795382830%7D">万金油</a>技术，所以建议你多关注人工智能。
+虽然我对“人工智能”这个自我贴金的称呼比较鄙视。</p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

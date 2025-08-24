@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1>关心军事</h1>
+            #
+不知兵，则不知军；
+不知军，则不知政；
+不知政，则不知经。
+不知经，则不知运。
+很多根本的政策问题都和——什么时候会打 / 能不能赢 / 会怎么打 / 会有什么得失 有极大关系。
+打得赢和打不赢，政策的走向会有方向性的不同。会怎么打，会极大的影响产业布局甚至城市定位。
+这些东西是影响经济局势、进而是影响人生计划的最根本的因素，只是经过了多重<a href="https://www.zhihu.com/search?q=%E7%A8%B3%E5%AE%9A%E5%99%A8&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22:%22answer%22%2C%22sourceId%22:2539039449%7D">稳定器</a>和<a href="https://www.zhihu.com/search?q=%E7%BC%93%E5%86%B2%E6%9C%BA%E5%88%B6&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22:%22answer%22%2C%22sourceId%22:2539039449%7D">缓冲机制</a>，对你进行了重重掩饰罢了。
+兵者，<a href="https://www.zhihu.com/search?q=%E5%9B%BD%E4%B9%8B%E5%A4%A7%E4%BA%8B&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22:%22answer%22%2C%22sourceId%22:2539039449%7D">国之大事</a>，死生之地，<a href="https://www.zhihu.com/search?q=%E5%AD%98%E4%BA%A1%E4%B9%8B%E9%81%93&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22:%22answer%22%2C%22sourceId%22:2539039449%7D">存亡之道</a>，不可不察也。
+很多人误以为这话是对皇帝或者元帅说的，
+殊不知，这其实是对<strong>每一个读者</strong>说的。
+你要留学，你要投资，你要择居，你要择业，如果你不懂军事，不识基本的胜负，你常会犯方向性的错误——<strong>筋疲力竭的向上游划水</strong>。
+多少努力，都被你毫无察觉的大势抵消了。
+甚至更惨——一夜之间，化为乌有。
+甚至更惨——不幸在错误的时间、错误的地方，你越“成功”，你越该死。
+这跟军事爱好者们的喜爱不是一回事。军事爱好者往往热衷于炫耀知识，人前争胜。
+你要真正的关心，关心到能下自己将来不会悔恨的赌注为止。不限男女，不拘贵贱，都是如此。
+因为这些问题关系到你的<a href="https://www.zhihu.com/search?q=%E7%9C%9F%E9%87%91%E7%99%BD%E9%93%B6&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22:%22answer%22%2C%22sourceId%22:2539039449%7D">真金白银</a>，关系到你的饭碗，实实在在的死生之地、存亡之道。
+直接关系到钱，你说要不要关心？
+<a href="https://www.zhihu.com/question/503875313/answer/2539039449">编辑于 2022-06-22 00:26</a>・IP 属地新加坡</p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

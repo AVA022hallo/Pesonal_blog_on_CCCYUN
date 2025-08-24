@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <section class="about-me">
+                <h1>关于我</h1>
+                <p>你好！我是鲁昊霖，一名热爱编程和技术的开发者。</p>
+                <p>我喜欢探索各种编程语言和技术栈，尤其是在嵌入式系统和前端开发方面有较多的经验。</p>
+                <p>这个博客是我分享技术文章、项目经验和个人见解的平台。希望通过这里的内容，能够帮助到更多的技术爱好者。</p>
+                <p>如果你对我的文章有任何建议或想法，欢迎通过社交链接与我联系！</p>
+                <p>我的邮箱:luhaolinhao2004@outlook.com</p>
+                <p>感谢你的访问，祝你阅读愉快！</p>
+            </section>
+            
+            <h1>留言板</h1>
+            <section class="message-board">
+                <h2>留言表单</h2>
+
+                <!-- 留言表单 -->
+                <form id="messageForm">
+                    <label for="name">姓名:</label>
+                    <input type="text" id="name" name="name" required placeholder="请输入你的名字">
+
+                    <label for="email">邮箱:</label>
+                    <input type="email" id="email" name="email" required placeholder="请输入你的邮箱">
+
+                    <label for="message">留言:</label>
+                    <textarea id="message" name="message" required placeholder="请输入你的留言" rows="4"></textarea>
+
+                    <button type="submit">提交留言</button>
+                </form>
+
+                <!-- 弹出已发布消息框 -->
+                <div id="messagePopup" style="display:none; padding: 10px; background-color: #28a745; color: white; margin-top: 10px;">
+                    留言发布成功！
+                </div>
+            </section>
+
+            <!-- 显示留言 -->
+            <section class="message-list">
+                <h3>留言列表</h3>
+                <div id="messages">
+                    <!-- 留言将在这里显示 -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+
+        // 提交留言
+        document.getElementById("messageForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // 阻止表单的默认提交行为
+
+            var formData = new FormData(this);
+
+            fetch("save_message.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                // 弹出已发布消息框
+                document.getElementById("messagePopup").style.display = "block";
+                // 1秒后自动隐藏消息框
+                setTimeout(() => {
+                    document.getElementById("messagePopup").style.display = "none";
+                }, 1000);
+                // 清空表单
+                document.getElementById("messageForm").reset();
+                // 显示留言
+                loadMessages();
+            })
+            .catch(error => alert('提交失败，请重试！'));
+        });
+
+        // 加载留言
+        function loadMessages() {
+            fetch("get_messages.php")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('网络错误');
+                }
+                return response.json();
+            })
+            .then(data => {
+                let messageContainer = document.getElementById("messages");
+                messageContainer.innerHTML = ""; // 清空当前留言列表
+
+                // 遍历留言并动态添加
+                data.forEach(message => {
+                    let messageDiv = document.createElement("div");
+                    messageDiv.classList.add("message-item");
+                    messageDiv.innerHTML = `
+                        <strong>${message.name}</strong> (${message.email}) <br>
+                        <p>${message.message}</p>
+                    `;
+                    messageContainer.appendChild(messageDiv);
+                });
+            })
+            .catch(error => {
+                alert('加载留言失败，请重试！');
+                console.error('加载留言失败:', error);
+            });
+        }
+
+        // 初次加载留言
+        loadMessages();
+    </script>
+</body>
+</html>

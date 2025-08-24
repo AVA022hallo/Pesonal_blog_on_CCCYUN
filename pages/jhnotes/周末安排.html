@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1>周末安排</h1>
+            #
+对于大城市的居民——例如北上广深港还有各省会城市，周末有时间最好尽可能安排邀请朋友一起看展会、看表演这一类的外出活动。
+看展览的优先顺序是与你直接相关的专业展会 &gt; 大型综合展（例如消费电子展、工业博览会、广交会、国际进口博览会……）&gt; 艺术展 / 博物展。
+看表演则优先看经典的名团名剧，次看先锋新剧。
+这些能“三五步阅尽山河”的体验是非常重要的，甚至远比看新闻、看网页重要得多。
+首先，因为这些是“实在”的东西，其分量远比互联网上的传闻有效得多。人家千里迢迢把者几吨重的东西运来装好是有巨大的成本的，要传递的当然是极端严肃的信息。这信息的坚实程度仅次于你直接走进对方的车间去看生产线了，而浓缩程度还犹有过之。</p>
+<p>和你分享这些见闻体验，是建立共同回忆的极好的形式。因为这些信息往往是新鲜的。“在那个会打乒乓球得机械臂旁边吃的那个冰激凌”对你们而言可以记住很久。
+这种牢固的共同回忆可以作为未来各种来往的宝贵的感情基础。
+而对哪些事物感兴趣、对何种事物做何种判断和评价，是你观察人的胸襟见识的极好机会，是你择友、择偶的重要依据。
+而这些又可以做得不动声色，进退自如。</p>
+<p>除此之外，那就是尽量安排一些社交活动，例如看电影、打球、钓鱼、参加志愿者活动……等等。
+这个就没有那么大的前提要求，但也可以获得外界的信息、获得直接的人际接触。</p>
+<p>这些社交活动如果是愉快的、健康的，可以在很大程度上抑制迷茫和抑郁倾向。这些关系的建立，对你未来面对失业、失恋、病困等等危机的信心有关键的意义。
+很多事情靠你一个人都是对付不了的，只要多一个人能哪怕临时的扶一把，对你都是巨大的补益，可以极大的击退你的绝望感。
+这绝对是一笔需要及早投入的战略投资，贪图打游戏、睡懒觉把这荒废了，到了三十五岁四十岁失个业，发现连一个可以指望的码头、甚至是信源都没有，那时候追悔莫及。
+如果你交游广阔而且相处愉快，你这一大帮朋友有某个机会可以提供给你的可能性就总是存在——这种心态开放、社会性充足的人注定是社会支柱，机会总是从ta们产生再流向别人的，哪怕是发生地震、发生战争，这些人也极难全部失意。这是个巨大的资源和安全保障，绝不能轻易错过。
+如何能与不同的人都进行愉快的，健康的社交，则是你要获得这份保障所需要付出的必要的研究和尝试。
+少tm吹什么“我社恐”之类的蠢话。
+你年轻时“社恐”，三十五岁失业时可别喊惨。</p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

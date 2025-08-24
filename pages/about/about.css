@@ -1,0 +1,59 @@
+/* 留言板的基本样式 */
+.message-board {
+    margin-top: 20px;  /* 给留言板的上方添加 20px 的间距，避免和上方内容贴得太紧 */
+}
+
+/* 留言表单的样式 */
+.message-board form {
+    margin-bottom: 20px;  /* 给表单下方添加 20px 的间距，避免和留言列表重叠 */
+}
+
+/* 输入框和文本框的样式 */
+.message-board input, .message-board textarea {
+    width: 100%;          /* 让输入框和文本框宽度占满父容器 */
+    padding: 10px;        /* 增加 10px 的内边距，让文本更加舒适 */
+    margin: 5px 0;        /* 上下 5px 的间距，让元素间有适当的分隔 */
+    border: 1px solid #ccc; /* 设置 1px 宽的灰色边框 */
+    border-radius: 4px;   /* 让边角有 4px 的圆角效果 */
+}
+
+/* 提交按钮的样式 */
+.message-board button {
+    padding: 5px 15px;   /* 为按钮添加内边距，水平 15px，垂直 10px，增大点击区域 */
+    background-color: #000080; /* 设置按钮的背景颜色为深蓝色（#000080） */
+    color: white;         /* 按钮文字颜色为白色 */
+    border: none;         /* 去掉按钮的默认边框 */
+    border-radius: 4px;   /* 设置按钮的圆角效果 */
+    cursor: pointer;      /* 鼠标悬停时显示手指图标 */
+}
+
+/* 提交按钮的悬停效果 */
+.message-board button:hover {
+    background-color: #000080;  /* 悬停时背景色保持不变，若需变化可更改此属性 */
+}
+
+/* 每个留言的样式 */
+.message-board .message {
+    position: relative;  /* 为每个留言添加相对定位，容器将作为删除按钮的参考 */
+    margin-bottom: 15px;   /* 每个留言之间有 15px 的间距 */
+    padding: 10px;         /* 给每个留言增加 10px 的内边距，使文字不紧凑 */
+    border: 1px solid #ccc; /* 给留言添加 1px 的灰色边框 */
+    border-radius: 4px;    /* 给留言添加 4px 的圆角效果 */
+}
+
+/* 删除按钮的样式 */
+.delete-btn {
+    position: absolute;   /* 绝对定位，定位到父元素的左上角 */
+    bottom: 10px;            /* 距离父元素顶部 10px */
+    right: 10px;           /* 距离父元素左侧 10px */
+    background-color: red;   /* 设置删除按钮的背景颜色为红色 */
+    color: white;            /* 删除按钮的文字颜色为白色 */
+    padding: 5px 10px;       /* 给删除按钮添加内边距，增加点击区域，水平 10px，垂直 5px */
+    border: none;            /* 删除按钮去掉默认边框 */
+    cursor: pointer;         /* 鼠标悬停时显示手指图标 */
+}
+
+/* 删除按钮的悬停效果 */
+.delete-btn:hover {
+    background-color: darkred; /* 悬停时背景色变为深红色，增强反馈效果 */
+}

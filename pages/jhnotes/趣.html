@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1>趣</h1>
+            #
+无趣的本质是懦弱，是对别人对自己投注兴趣的恐惧。
+有趣的话，谁都能想到几句，区别不在于你想不想得到，而在于你对这几句话释放出去的后果的直觉判断。
+你害怕有哪点没演好沦为笑柄，你恐惧冷场，你恐惧抢了谁的风头结怨，你害怕失了矜持体面受人轻视，你害怕演好了遭人嫉妒，你害怕有人喊再来一个，你害怕观众抢白刨活，你害怕证明自己还不如你所轻视嗤笑的“小丑”们。
+你觉得观众的快乐不如这些可能的后果重要。
+你觉得观众不如你重要。
+甚至，你根本没有考虑观众。
+你知道有趣的人怎么想吗？
+ta只想到这么好玩的东西，怎么能不让大家看到。
+ta根本没在想演砸了怎么办，有人看不起怎么办，有人嫉妒怎么办，冷场怎么办。
+还没来得及想这些、甚至就没想过这些，ta只有一个念头“这么好的梗，不说出来我会死”。
+在那一瞬间，有趣的人是无我的，ta的眼里只有别人的快乐。
+这是因为头脑简单也罢、是因为性格冲动也罢、是因为涉世未深也罢，总而言之，就像初生牛犊不怕虎，这牛犊毕竟是昂然直对猛虎，毫无惧色。
+甚至毫无惧意、毫无惧念。
+“为了我的快乐，ta什么都没想，什么都不怕。”
+这才是使得一个人在观众眼里变得有趣的根源。
+观众是观众，观众不是演员，正是因为观众自己也深深的害怕，自己就熟知这扼住歌喉、扭住舞姿的恐惧，所以观众无意识的就敬重这份置荣辱于度外，完全注目在对方的快乐上的英勇。
+而且你注目的是我的快乐。
+为了我的快乐，你敢于无视我自己不敢直视的无限险恶，竟毫无惧色，全然抛诸脑后。
+你笨拙又如何？你失误又怎样？你是为了我。
+我怎么能不觉得你有趣？
+我怎么能容你受辱？
+我何忍让你受伤、沮丧、失望？</p>
+<p>这就是有趣的魔法，它不需要人在大脑里明确的意识到上面这全部的过程，甚至不需要人知道这些概念。
+在小孩子一个字都认识，甚至连爸爸、妈妈都不会叫、只会看鬼脸的时候，人对这种应用的感受能力和回应本能已经生效了。
+所以婴儿已经知道扮鬼脸的父母亲友们“有趣”。
+而恰恰是同一原因，那些不是为了观众的快乐而是为了自己的虚荣和炫耀的“表演”，虽然技术精湛，场面宏大，却常常“莫名其妙”的变成灾难。
+否则人们对表演的恐惧又是从哪里见识来的呢？
+有趣的根源是爱。
+爱你的观众，胜过你的尊荣。
+爱ta的快乐，胜过你的生命。
+忘记自己，只向着“好想看到你的笑容”奔跑，你就无论如何都是有趣的了。
+不用任何技艺，砸锅砸得稀巴烂，出乖露丑也无妨。
+赴汤蹈火，博卿一笑。</p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

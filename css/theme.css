@@ -1,0 +1,50 @@
+/* 主题样式 */
+body {
+    font-family: 'Microsoft YaHei', '微软雅黑', 'SimHei', '黑体', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* 平滑滚动 */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+body.light-mode {
+    background-color: #ffffff;
+    color: #333;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+button.theme-toggle {
+    background-color: #333;
+    color: white;
+}
+
+/* 引用文本的样式 */
+.quote-container {
+    text-align: center;
+    padding: 40px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quote-text {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.5em;
+    color: #333;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.quote-author {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 15px;
+    font-style: italic;
+}

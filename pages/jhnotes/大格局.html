@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1>大格局</h1>
+            #
+大格局有一个很简单的判别方式。
+既不是“资金规模”，也不是“建筑面积”，也不是“人员总量”。
+而是考量的<strong>历史感</strong>。
+不仅仅为一时、一地、一事而谋，而且时时处处<strong>既充分的面对现实的挑战，也站在一切过去的经验之上，面向一切未来的可能</strong>。
+这类人，必定对历史有相当深入的心得和认识，对现状有清醒而毫不乡愿的认识，而对未来有超出常人的愿景和安排。
+这些人常常选择旁人觉得“莫名其妙”的奇怪方案。这种方案，往往放在实施的当下让人觉得有点令人难以理解的“迂腐”、“累赘”而“没有必要”，甚至“有无谓风险和多余成本”。
+但是将来等那些事情到来，人们才会看到这些铺垫是多么的有先见之明。
+格局，和空间和数量没有关系——历史上多有器量狭小、人格猥琐的帝王将相，也有的是一掷万金的穷富人。
+但却从来没有<strong>能谋后世的小人</strong>。
+这就是格局的衡量方法——看一个人有没有历史使命感，有没有和这个历史使命感匹配的历史修养。
+哪怕他只是个图书管理员，或者炮兵少尉，甚至只是个在市场到处找人聊天的。</p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

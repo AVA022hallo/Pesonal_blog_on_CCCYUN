@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1>情绪大师</h1>
+            #
+很多时候会因为别人的一句话一个表情或一件小事而情绪低落，即使那个人并不是很重要。如果表达出自己不开心的原因别人可能会说你真是想多了，太敏感了。但更多时候我知道自己的直觉是准确的，对于别人的敌意非常敏感。有时候 会压抑着这种情绪，但这样真的很不开心，虽然多次告诉自己不要那么在意别人的看法，但却还是会有负面情绪。我不想这样，怎样才能很好的控制自己的情绪，告别玻璃心？
+去打工赚钱，好好做，多赚点钱。
+学会赚钱了，学会怎么争取客户、服务客户、维持客户了，现金滚滚而来了，你这类“控制情绪的困难”当然就会大幅的削弱。
+这并不是因为你有钱了不怕了，也不是因为被客户折磨得麻木了所以你不怕了，而是“市场认可”是一个很好的工具，可以让你摸清“如何对待人是具有可持续性的”。
+市场可以告诉你可持续性的及格线在哪，而且它的答案是比较可靠的。
+这既不是一个“顾客就是上帝”的标准，也不是一个人“走自己的路让别人说去吧”的标准，它很复杂，一言难尽，但它很有权威性、决定性，因为它会用真金白银支持它的结论。
+你之所以有这些对别人情绪极端敏感的问题，在根本上就是因为你心里没底，所以一切都不由自主的往严重的方向猜测，不自觉的自我恐吓。
+没办法，你不知道安全线到底在哪，你当然只好一切倍加小心。
+但这结果就是一日三惊，筋疲力竭。
+张三李四安慰你也没用，因为你发现ta们的安慰没有决定性。ta们说“不用担心，没事的”，过两天出事了，ta们也只能默默鼻子说一声不好意思而已，还能怎样？
+但是如果是市场给你的认可呢？它直接把钱装进你的口袋里——我说没事，多没事？一万五千块的没事。有事我赔你一万五，来，我先放你兜里，有事拿去花。
+你要找窍门、学心得，听人说了不算，必须市场点头，市场付款才算。
+这是唯一决定性解决问题的办法，躲在家里翻书是没用的。
+早点出门，参加劳动，就这样。</p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

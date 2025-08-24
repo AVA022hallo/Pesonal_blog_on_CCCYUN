@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1> 三面围堵</h1>
+            <p>&gt; 湖北武汉一 14 岁男生被母亲打耳光后跳楼坠亡，事前因玩扑克被请家长，学校和家庭教育应该如何反思？</p>
+<p>首先，这位母亲的行为并不是一种合格有效的批评。</p>
+<p>[为什么人们不喜欢被批评？](https://www.zhihu.com/question/22987136/answer/1434894604)也许她自己没有这样的明确的主观故意，但可惜人发出的信号并不是完全由人的主观意愿决定的。</p>
+<p>人最大的难题，就是说话、做事并不总是能匹配自己的意图。</p>
+<p>想给建议，却做成了批斗（judge）；想要和好，却做成了贿赂；想要鼓励，却做成了吹捧；想要分手，却做成了抛弃；想要说服，却成了胁迫；想要爱，却做成了罪。</p>
+<p>说出来的话已经常不从你心，何况听者还要再加一层想象和猜疑，更何况这之上还有听漏、看错。</p>
+<p>人心与人心之间隔着两重巴别塔，能有什么关系延续一生而又善始善终，真的是一种奇迹。</p>
+<p>能打破巴别塔的东西，并不是什么超人的表达力和不会犯任何错误的聪明智慧，而是信。</p>
+<p>我不是因为听见毫无歧义的明确表达或靠严密推理确认你毫无恶意，而是我出于相信你的爱，而将我所识别出来的恶意感全部定性为沟通失误，直接加以无视。</p>
+<p>是靠着信、而不是靠着什么“正确表达”和“正确理解”，我们的对话才没有走向交叉升级的语言凶杀。</p>
+<p>相信对方的爱，相信自己猜疑出来的负面信息是一种误会，相信对方只是口误，相信对方只是失言或一时冲动。不用说，这种会把自己置于极其危险、被动等待易受伤害的位置。你所相信的对象若是确实并非好意，你就会受到很重的伤害。</p>
+<p>真正的差别在于——在受到伤害之后，你是选择“提高选择的技巧，但仍然相信”；还是选择“不再相信，而不必纠结选择的技巧”。</p>
+<p>选前者，你仍会因为一次次的选择失误，而且一次次的受伤，要到很久以后才会慢慢练出一双勉强得用的眼睛和一颗足够坚固的心。</p>
+<p>选后者，你就不必再冒“相信人而受伤”的险，也不必去培养什么坚固的心，但代价就是你因为无法相信而无法消除对疑似恶意的敏感，而又缺少真正坚强的心。</p>
+<p>于是你总是会用放逐对方来解决再次受伤问题。</p>
+<p>但这有两个绝境——要么所有人都被你放逐，你的世界里终于空无一人。</p>
+<p>要么，一旦对方不是你能放逐的对象，就将出现致命三角——既不能依靠相信而消解、又不能靠坚强来忍受、又不能靠驱逐而消除。</p>
+<p>那还剩下什么选择呢？</p>
+<p>所以，我要提醒父母们注意——你们必须学会走前一条路，以便获得足够的走这条路的经验来传授给子女。为了学会走这条路，你们必须要选择走这条路。</p>
+<p>你们若是自己不选择爱，也就学不会爱，也就教不了爱。</p>
+<p>而爱所必要的能力、素养和经验，是唯一真正能实在抑制这类悲剧的救赎。</p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="guide.css">
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+
+        <!-- 主页内容 -->
+        <main>
+            <section class="timeline" id="posts">
+                <!-- 动态加载内容 -->
+            </section>
+            <!-- 分页控件 -->
+            <div id="pagination">
+                <button id="prevBtn">上一页</button>
+                <span id="pageNumber">第1页</span>
+                <button id="nextBtn">下一页</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+
+        let currentPage = 1;  // 当前页
+        const postsPerPage = 8;  // 每页显示的文章数
+        let posts = [];  // 存储从JSON加载的文章数据
+
+        // 加载数据
+        fetch('guide.json')
+            .then(response => response.json())  // 解析JSON文件
+            .then(data => {
+                posts = data;  // 将文章数据存储到posts变量
+                const totalPages = Math.ceil(posts.length / postsPerPage);  // 计算总页数
+
+                // 处理数据，按年份分组
+                function groupPostsByYear(posts) {
+                    const grouped = {};
+
+                    // 分组数据
+                    posts.forEach(post => {
+                        const year = post.date.split('-')[0];  // 获取年份部分
+                        if (!grouped[year]) {
+                            grouped[year] = [];
+                        }
+                        grouped[year].push(post);
+                    });
+
+                    // 将 grouped 对象转换为数组，并按年份降序排序
+                    const sortedGrouped = Object.keys(grouped)
+                        .sort((a, b) => b - a)  // 按年份降序排序
+                        .map(year => ({
+                            year: year,
+                            posts: grouped[year]  // 将文章按年份分组后存储
+                        }));
+
+                    return sortedGrouped;
+                }
+
+                // 渲染当前页的文章
+                function renderPage(page) {
+                    const start = (page - 1) * postsPerPage;
+                    const end = page * postsPerPage;
+                    const currentPosts = posts.slice(start, end);  // 获取当前页的文章
+
+                    const timelineContainer = document.querySelector('#posts');
+                    timelineContainer.innerHTML = '';  // 清空当前内容
+
+                    // 将文章按年份分组
+                    const groupedPosts = groupPostsByYear(currentPosts);
+
+                    // 遍历排序后的分组数据
+                    groupedPosts.forEach(group => {
+                        const yearBlock = document.createElement('div');
+                        yearBlock.classList.add('timeline-year-block');
+
+                        // 添加年份标题
+                        const yearElement = document.createElement('div');
+                        yearElement.classList.add('timeline-year');
+                        yearElement.textContent = group.year;
+                        yearBlock.appendChild(yearElement);
+
+                        // 添加该年份下的文章
+                        group.posts.forEach(post => {
+                            const postElement = document.createElement('div');
+                            postElement.classList.add('timeline-item');
+                            postElement.innerHTML = `
+                                <div class="timeline-content">
+                                    <h2><a href="${post.url}">${post.title}</a></h2>
+                                    <p class="timeline-time"><em>${post.date}</em></p>
+                                </div>
+                            `;
+                            yearBlock.appendChild(postElement);
+                        });
+
+                        timelineContainer.appendChild(yearBlock);
+                    });
+
+                    // 更新分页控件
+                    updatePagination(totalPages, page);
+                }
+
+                // 更新分页控件
+                function updatePagination(totalPages, currentPage) {
+                    const paginationContainer = document.getElementById('pagination');
+                    paginationContainer.innerHTML = '';  // 清空现有分页按钮
+
+                    // 上一页按钮
+                    const prevBtn = document.createElement('button');
+                    prevBtn.textContent = '<';
+                    prevBtn.disabled = currentPage === 1;
+                    prevBtn.addEventListener('click', () => {
+                        if (currentPage > 1) {
+                            currentPage--;
+                            renderPage(currentPage);
+                        }
+                    });
+                    paginationContainer.appendChild(prevBtn);
+
+                    // 页码按钮：显示当前页前 2 页，后 3 页
+                    let startPage = Math.max(1, currentPage - 2);
+                    let endPage = Math.min(totalPages, currentPage + 3);
+                    
+                    // 确保总共显示 5 页
+                    if (endPage - startPage < 4) {
+                        startPage = Math.max(1, endPage - 4);
+                    }
+
+                    for (let i = startPage; i <= endPage; i++) {
+                        const pageBtn = document.createElement('button');
+                        pageBtn.classList.add('page-num');
+                        pageBtn.textContent = i;
+                        if (i === currentPage) {
+                            pageBtn.classList.add('active-page');  // 高亮当前页
+                        }
+                        pageBtn.addEventListener('click', () => {
+                            currentPage = i;
+                            renderPage(currentPage);
+                        });
+                        paginationContainer.appendChild(pageBtn);
+                    }
+
+                    // 下一页按钮
+                    const nextBtn = document.createElement('button');
+                    nextBtn.textContent = '>';
+                    nextBtn.disabled = currentPage === totalPages;
+                    nextBtn.addEventListener('click', () => {
+                        if (currentPage < totalPages) {
+                            currentPage++;
+                            renderPage(currentPage);
+                        }
+                    });
+                    paginationContainer.appendChild(nextBtn);
+
+                    // 更新页码显示
+                    document.getElementById('pageNumber').textContent = `第${currentPage}页`;
+                }
+
+                // 初始化页面
+                renderPage(currentPage);
+            })
+            .catch(error => console.error('加载数据失败:', error));
+
+
+
+    </script>
+</body>
+</html>

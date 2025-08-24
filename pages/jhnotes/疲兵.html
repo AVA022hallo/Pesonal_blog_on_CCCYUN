@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1>疲兵</h1>
+            #
+亲密关系中其实根本没有情绪问题，只有关系问题。
+<strong>亲密关系中情绪爆发只有一个根源，就是==至少有其中一方看见了当前模式的不可持续——一个赌上了一切的、需要无限可持续的合作，显而易见的出现了不可持续性。==</strong>
+是的，就这一个根源。
+从这个根源起，酝酿了危机，是什么引爆了危机？是一方==对不可持续危机的体认甚至没有得到对方的认同。==
+我觉得按这样下去不行——甚至不是“觉得”，而是我在不断的衰弱，我快不行了，这已经是一个我完全确认的事实——但你却觉得“一切都还好”，甚至拒绝讨论进行讨论的可能性。
+我不是有“情绪”，而是我发现这已经是你唯一能听见的语言。
+我选过别的了。
+我选过暗示。
+我选过建议。
+我选过等待。
+我选过先道歉。
+我选过放弃期望。
+我都选过了。
+得到的都是“能不能不要作”。</p>
+<p>你可能觉得我的唯一问题就是不相信你的“诚意”——准确的说，是不相信你对我的迷恋——不错，在一开始的确是这样。
+因为我认为只要你对我的迷恋是牢固的，那么我总有足够的力量撬动足够的改变。那么一些让我惊惶不安的恐惧我就可以暂时有战胜的信心，我的焦虑就可以缓和。
+但这是信心，不是答案。
+答案是==我们的互动方式需要调整，需要对不断造成我的损失的事态作出有效的应对。==
+我需要恢复对这个关系能应对这些挑战的乐观，最好的手段，是经过共同思考，提出有创意的、逻辑通顺的、值得期待的新解决方案。
+我要的是更多的==调查、研究、计算、设计、测试==，而不是更多的毒咒、发誓、表决心、拍胸脯、开玩笑、引开注意力。
+我要的甚至不是问题得到解决，而是足以让我甘心接受“问题无法解决”的足够真诚的尝试。
+所以，答案唯一而且明确——找到问题、解决问题。
+情绪只是用来促成这一行动的自然语言。
+不解决问题的“解决情绪”，只不过是一种巧妙伪装的疲兵之计。</p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

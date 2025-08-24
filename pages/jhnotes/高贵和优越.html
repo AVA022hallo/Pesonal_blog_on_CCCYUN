@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1>高贵和优越</h1>
+            #
+高贵不是一个相对的概念，而是一个道德化的概念。简单来说，就是take the high road，走高尚的路。
+说谎不会被抓住，抓住也没啥后果，但是我不说谎；搞小动作好处大大的，搞的人多了，不缺你一个，但是你不搞；暗室可欺，但你不欺。
+高贵是高贵在不做那些挖社会墙角的事，<strong>高贵在有道德勇气</strong>。
+为什么这不叫做“有优越感”？因为这样做的人默认按照别人也可以做到、也想做到、做不到会遗憾和羞愧来来对待自己身边的人、对待一般人。
+这是在<strong>把别人当作同类。</strong>
+<strong>注意，这种“视为同类”的待遇，并不要求你一定要做到，而是“你如果做不到，有羞愧的勇气也一样是有道德勇气”，你一样可以被视为高贵的人。</strong>
+甚至越是家境贫寒，不以贫穷作为抛弃道德追求的借口，就越是高贵。因此，这跟你的经济条件、生活水平没有关系。
+高贵感不是比较性的，而是有一根线，这根线富人能过，穷人也能过；白人能过，黑人也能过；信佛的能过，无神论的也能过。
+过了这根线，全都高贵，而且全都一样高贵。过不了这根线，全都猥琐。
+只要是猥琐的，不管你多么玉堂金马、锦衣玉食，你也不如最穷的高贵的人。</p>
+<p>而优越感是一个相对的概念——就是我比你强，我比你好。这基本上是按照经济地位、权势地位来的，说白了就是势利眼。
+这个之所以容易激怒人，主要在于它有一种无言的愚蠢——这只是在迷信现有的地位优势可以无限的、无条件的持续下去。这问题不是“看不起我”，而是看不起老天爷，把上天看作为ta个人服务的奴仆。
+人真正愤怒的，其实往往不是人鄙视自己的现状——现状就是你强我弱，很直白，是事实，对事实愤怒个啥——人真正愤怒的是人鄙视自己的可能性。
+你可以认为这种愤怒其实是自然的一个诡计，实际上是自然要惩罚冒犯它的人，所以把这种愤怒本能注入了人类意识的底层，使得听到这种言论的人自然的产生强烈的攻击性。
+所以高贵感引发人的尊重甚至亲近的渴望，但是优越感却导致人被激怒，招来惩罚和打击。</p>
+<p>高贵感不是优越感，因为人人都应该高贵，这跟经济条件、社会地位无关。</p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

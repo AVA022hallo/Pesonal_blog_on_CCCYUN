@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1>领导力特征</h1>
+            #
+到底什么是“领导（lead）”，什么是“管理（manage）”？
+领导，是要从没有路的地方走出路来，从走过的路上走出新路来，是要带领他人航向未知之地。领导解决的主要问题，是团队对未来的迷茫和焦虑问题，是管理团队的愿景和信心。
+领导要负责观察未来一年、三年、五年、十年的环境变迁，负责决定团队的理想、愿景和价值观/<a href="https://www.zhihu.com/search?q=%E4%BC%A6%E7%90%86%E5%8E%9F%E5%88%99&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22:%22answer%22%2C%22sourceId%22:1718155200%7D">伦理原则</a>，负责基于这一原则维护决策团队和顾问团队。
+要做到这些职责，最重要的要害，是一个足够完整和自洽的世界观，一个足够通顺和可持续的价值观。
+<strong>这往往体现在对历史的熟知和对时势的敏感；对<a href="https://www.zhihu.com/search?q=%E9%81%93%E5%BE%B7%E4%BC%A6%E7%90%86&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22:%22answer%22%2C%22sourceId%22:1718155200%7D">道德伦理</a>的深刻理解、高度重视与坚定的执着；对未来愿景的清晰的、坚定的信念和追求。</strong>
+<strong>这其实就是高度成熟的世界观、价值观和人生观。</strong>
+很多人认为仲裁的权利是来自于给工资，其实这是完全错误的。因为人家也可以选择去别处领这份工资——那些真的有能力、你想要获得分人才，理所当然的尤其如此。
+那些为了钱不能不“忍受你的强迫”的人，和你之间根本不是领导和被领导的关系，而只是一种<a href="https://www.zhihu.com/search?q=%E5%A5%B4%E5%BD%B9&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22:%22answer%22%2C%22sourceId%22:1718155200%7D">奴役</a>和寄生关系。
+做起事情来效果完全是两回事。
+三条齐备，上上之选。
+退而求其次，要道德观、价值观成熟。
+再退而求其次，要愿景清晰而且坚定。
+再往后，就退无可退了。这三条一条都没有——至少不让你信服和乐观——那就意味着此非久留之处，此非可托之人。
+那就意味着你还不能“定居”，你不能停止寻找，要及早准备后路。</p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

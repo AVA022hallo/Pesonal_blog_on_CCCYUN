@@ -1,0 +1,185 @@
+/* 时间轴容器 */
+.timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 50px; /* 留出空间给时间竖线 */
+}
+
+/* 每个年份块 */
+.timeline-year-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 每个时间节点 */
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    padding-left: 30px; /* 给作品添加缩进 */
+    opacity: 0; /* 初始时隐藏，待加载后展示 */
+    animation: fadeInUp 0.6s forwards;
+}
+
+/* 年份 */
+.timeline-year {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 10px;
+    position: relative;
+    z-index: 1;
+    padding-left: 20px; /* 留出空间给竖线 */
+}
+
+/* 竖线 */
+.timeline-year-block::before {
+    content: "";
+    position: absolute;
+    left: -30px; /* 控制竖线的位置 */
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #000080; /* 时间线颜色 */
+}
+
+/* 文章内容框 */
+.timeline-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+    position: relative;
+    width: 100%;
+    border-radius: 15px;  /* 设置圆角 */
+}
+
+/* 动画效果 */
+.timeline-item:nth-child(1) .timeline-content {
+    animation-delay: 0.1s;
+}
+
+.timeline-item:nth-child(2) .timeline-content {
+    animation-delay: 0.2s;
+}
+
+.timeline-item:nth-child(3) .timeline-content {
+    animation-delay: 0.3s;
+}
+
+/* 动画效果：逐渐显示并从下往上滑动 */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 链接样式 */
+.timeline-content h2 a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s ease; /* 平滑过渡效果 */
+}
+
+/* 鼠标悬停时改变颜色 */
+.timeline-content h2 a:hover {
+    color: #000080;  /* 鼠标悬停时变为蓝色 */
+}
+
+/* 时间标签样式 */
+.timeline-time {
+    position: absolute;    /* 定位时间 */
+    top: 10px;             /* 距离顶部10px */
+    right: 10px;           /* 距离右侧10px */
+    font-size: 14px;       /* 字体大小 */
+    color: #999;           /* 时间颜色 */
+    font-style: italic;    /* 斜体字 */
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 0;
+    }
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .timeline-year {
+        text-align: left;
+        margin-left: 0;
+    }
+    .timeline-year-block::before {
+        left: 0;
+        top: 10px; /* 调整竖线的位置 */
+    }
+}
+
+/* 默认样式 */
+.timeline-content p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* 分页控件样式 */
+#pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;  /* 增加按钮之间的间隙 */
+}
+
+/* 分页按钮样式 */
+#pagination button, #pagination .page-num {
+    width: 16px; /* 固定宽度 */
+    height: 16px; /* 固定高度，确保是正方形 */
+    padding: 0;  /* 去掉内边距，防止按钮超出边界 */
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: #000080;  /* 默认背景色 */
+    color: white;
+    border: none;
+    border-radius: 5px;  /* 圆角效果 */
+    font-size: 14px;  /* 设置字体大小 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* 添加动画效果 */
+}
+
+/* 鼠标悬停时 */
+#pagination button:hover, #pagination .page-num:hover {
+    background-color: #333;  /* 悬停时的背景色 */
+    transform: scale(1.1);  /* 悬停时按钮放大 */
+}
+
+/* 当前页码按钮样式 */
+#pagination .active-page {
+    background-color: #f44336;  /* 高亮当前页按钮颜色 */
+    color: white;  /* 高亮时字体颜色 */
+    font-weight: bold;  /* 高亮时字体加粗 */
+}
+
+/* 禁用按钮样式 */
+#pagination button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    #pagination button, #pagination .page-num {
+        font-size: 12px;  /* 在小屏幕上进一步缩小按钮 */
+        width: 35px;
+        height: 35px; /* 确保在小屏幕上也是正方形 */
+    }
+}

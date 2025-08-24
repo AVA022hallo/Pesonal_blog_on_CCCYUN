@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>20230609.md</title>
+<!-- 引入主样式 -->
+<link rel="stylesheet" href="../../css/main.css">
+
+<!-- 引入布局样式 -->
+<link rel="stylesheet" href="../../css/layout.css">
+
+<!-- 引入主题样式 -->
+<link rel="stylesheet" href="../../css/theme.css">
+
+<!-- 引入20230609样式 -->
+<link rel="stylesheet" href="20230609.css">
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  	<script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  	</script>
+  	<!-- 动态加载头部 -->
+    <div id="header"></div>
+
+  	<div class="container">
+		<!-- 动态加载侧边栏 -->
+		<div id="sidebar"></div>
+		<!-- 主页内容 -->
+		<main>
+			<h1 id="%E5%89%8D%E8%A8%80">前言</h1>
+			<blockquote>
+			<p>在阅读本文前请先了解如何实现按键电灯。</p>
+			</blockquote>
+			<hr>
+			<h1 id="%E4%B8%80%E4%B8%AD%E6%96%AD%E5%8E%9F%E7%90%86">一、中断原理</h1>
+			<p><img src="../../assets/images/stm32_interrupt_lighting/中断任务图.png" alt="中断任务图"></p>
+			<blockquote>
+			<p>单片机只能串行运行程序，无法一边烧开水一边洗衣服。</p>
+			</blockquote>
+			<p>所以如果单片机吃饭(任务一)吃到一半想上厕所（中断任务）怎么办？</p>
+			<ul>
+			<li>首先得你的括约肌得先绷不住（触发中断条件），</li>
+			<li>然后你放下碗筷去往厕所（执行中断任务），</li>
+			<li>擦好屁股洗好手（完成中断任务），</li>
+			<li>回来继续吃饭(任务一)。</li>
+			</ul>
+			<h1 id="%E4%BA%8C%E5%AE%9E%E4%BE%8B%E5%A4%96%E9%83%A8%E4%B8%AD%E6%96%AD%E6%8C%89%E9%94%AE%E7%82%B9%E7%81%AF">二、实例——外部中断按键点灯</h1>
+			<h2 id="ledh">led.h</h2>
+			<pre><code>#ifndef __LED_H
+			#define __LED_H  
+			#include &quot;sys.h&quot;
+
+			//LED端口定义
+			#define LED0 PAout(8)   // PA8
+
+			void LED_Init(void);    //初始化                           
+			#endif
+			</code></pre>
+			<h2 id="ledc">led.c</h2>
+			<pre><code>#include &quot;sys.h&quot;   
+			#include &quot;led.h&quot;
+
+
+			//初始化PA8
+			//LED IO初始化
+			void LED_Init(void)
+			{
+				RCC-&gt;APB2ENR|=1&lt;&lt;2;    //使能PORTA时钟               
+				GPIOA-&gt;CRH&amp;=0XFFFFFFF0; 
+				GPIOA-&gt;CRH|=0X00000003;//PA8 推挽输出        
+				GPIOA-&gt;ODR|=1&lt;&lt;8;      //PA8 输出高
+			}
+			</code></pre>
+			<h2 id="keyh">key.h</h2>
+			<pre><code>#ifndef __KEY_H
+			#define __KEY_H  
+			#include &quot;sys.h&quot;
+
+
+			#define KEY0  PCin(5)       //PC5
+
+			void KEY_Init(void);        //IO初始化
+			#endif
+
+			key.c
+			#include &quot;key.h&quot;
+			#include &quot;delay.h&quot;
+
+			//按键初始化函数 
+			//PA0.15和PC5 设置成输入
+			void KEY_Init(void)
+			{
+				GPIOC-&gt;CRL&amp;=0XFF0FFFFF; //PC5设置成输入    
+				GPIOC-&gt;CRL|=0X00800000;   
+				GPIOC-&gt;ODR|=1&lt;&lt;5;       //PC5上拉
+			}
+			</code></pre>
+			<p>以上程序实现，<code>KEY0=PCin(5)</code>，为上拉输入，即按键未按时，<code>PC5</code>读入高电平，<code>KEY0=1</code>；当接地时（按键按下时），<code>PC5</code>电平下降（！！中断触发条件），<code>KEY(0)=0</code>。</p>
+			<h2 id="mainc">main.c</h2>
+			<pre><code>#include &quot;sys.h&quot;
+			#include &quot;usart.h&quot;      
+			#include &quot;delay.h&quot;  
+			#include &quot;led.h&quot;  
+			#include &quot;exti.h&quot; 
+			//可以看到我们并未在main函数中引入&quot;key.h&quot;
+
+			int main(void)
+			{           
+				Stm32_Clock_Init(9);//系统时钟设置
+				delay_init(72);     //延时初始化
+				uart_init(72,9600); //串口初始化 
+				LED_Init();         //初始化与LED连接的硬件接口
+				EXTI_Init();        //外部中断初始化
+				LED0=0;             //点亮LED
+				while(1) //程序在主函数中陷入死循环
+				{       
+					printf(&quot;OK\r\n&quot;);
+					delay_ms(1000);   
+				} 
+			}
+			</code></pre>
+			<p>我让<code>main</code>函数陷入串口发送“OK”的死循环，按照串行逻辑，此时按键无法对程序执行产生影响。但当我们引入中断，就可以实现如图功能：</p>
+			<p><img src="../../assets/images/stm32_interrupt_lighting/点灯实例.png" alt="点灯实例"></p>
+			<p>接下来我们进入中断函数：</p>
+			<h2 id="exitc">exit.c</h2>
+			<pre><code>#include &quot;exti.h&quot;
+			#include &quot;led.h&quot;
+			#include &quot;key.h&quot;
+			#include &quot;delay.h&quot;
+			#include &quot;usart.h&quot;
+
+			//外部中断9~5服务程序
+			void EXTI9_5_IRQHandler(void)
+			{           
+				delay_ms(10);   //消抖             
+				if(KEY0==0)     //按键0
+				{
+					LED0=!LED0;
+				}
+				EXTI-&gt;PR=1&lt;&lt;5;     //清除LINE5上的中断标志位  
+			}
+
+			//外部中断初始化程序
+			//初始化PC5为中断输入.
+			void EXTI_Init(void)
+			{
+				KEY_Init();
+				Ex_NVIC_Config(GPIO_C,5,FTIR);      //下降沿触发
+				MY_NVIC_Init(2,0,EXTI9_5_IRQn,2);   //抢占2，子优先级1，组2  
+			}
+			</code></pre>
+			<h3 id="%E4%B8%AD%E6%96%AD%E5%88%9D%E5%A7%8B%E5%8C%96extiinitvoid">中断初始化EXTI_Init(void)</h3>
+			<p>在main.c开始，我们先进行了<code>EXTI_Init(void)</code>，所以需要了解三个中断设置函数：</p>
+			<p><strong>设置函数MY_NVIC_Init</strong></p>
+			<p>该函数有 4 个参数，分别为： <code>NVIC_PreemptionPriority</code> 、<code>NVIC_SubPriority</code>、 <code>NVIC_Channel</code>、 <code>NVIC_Group </code>。
+			第一 个 参数<code>NVIC_PreemptionPriority</code>为中断抢占优先级数值，第二个参数 <code>NVIC_SubPriority </code>为中断子优先 级数值，前两个参数的值必须在规定范围内，否则也可能产生意想不到的错误。第三个参数 <code>NVIC_Channel </code>为中断的编号，最后一个参数 <code>NVIC_Group </code>为中断分组设置（范围为 0~4）。</p>
+			<p><strong>分组函数 MY_NVIC_PriorityGroupConfig</strong></p>
+			<p>该函数的参数<code>NVIC_Group</code>为要设置的分组号，可选范围为0至4，总共 5 组。如果参数非法，将可能导致不可预料的结果。
+			规定触发方式<code>Ex_NVIC_Config</code>
+			该函数有3个参数：<code>GPIOx</code> 为 <code>GPIOA~G（0~6）</code>，在 <code>sys.h </code>里面有定义。代表要配置的 IO 口。<code>BITx </code>则代表这个 IO 口的第几位。<code>TRIM </code>为触发方式，低 2 位有效（<code>0x01 </code>代表下降触发；<code>0x02 </code>代表 上升沿触发；<code>0x03</code> 代表任意电平触发）。</p>
+			<pre><code>//外部中断初始化程序
+			//初始化PC5为中断输入
+			void EXTI_Init(void)
+			{
+				KEY_Init();//对按键的输入输出进行初始化，KEY=PCin（5）
+
+				//规定中断触发条件，本程序中是PC5in电平下降
+				Ex_NVIC_Config(GPIO_C,5,FTIR);      //下降沿触发
+				//如果是高电平触发，则FTIR改为RTIR
+
+				MY_NVIC_Init(2,0,EXTI9_5_IRQn,2);   //抢占2，子优先级0，组2  
+			}
+			</code></pre>
+			<p><strong>中断服务函数EXTI9_5_IRQHandler(void)</strong></p>
+			<p>该程序即为“上厕所”。STM32 的外部中断 0至4 都有单独的中断服务函数，但是从 5 开始， 他们就没有单独的服务函数了，而是多个中断共用一个服务函数，比如外部中断 5至9 的中断服 务函数为：<code>void EXTI9_5_IRQHandler(void)</code>，类似的，<code>void EXTI15_10_IRQHandler(void)</code>就是 外部中断 10~15 的中断服务函数。</p>
+			<pre><code>//外部中断9~5服务程序
+			void EXTI9_5_IRQHandler(void)
+			{           
+				delay_ms(10);   //消抖             
+				if(KEY0==0)     //按键0
+				{
+					LED0=!LED0;
+				}
+				EXTI-&gt;PR=1&lt;&lt;5;     //清除LINE5上的中断标志位  
+			}
+			</code></pre>
+			<h1 id="%E6%80%BB%E7%BB%93">总结</h1>
+			<p>单片机学习到尽头就是操作系统。单片机某一时刻只能执行一件任务A。当A一个任务就能把算力全部吃掉时，这样做无可厚非；而发展到后来，硬件资源足够充足，A不足以消耗所有资源时，B\C\D程序必须等待A程序执行完毕才能执行，这无疑是一种浪费。而操作系统的优势在于能够并行程序，同时执行ABCD，充分利用硬件资源，大大提高了程序的运行速度。</p>
+		</main>
+  	</div>
+	<!-- 动态加载尾部 -->
+    <div id="footer"></div>
+	<script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

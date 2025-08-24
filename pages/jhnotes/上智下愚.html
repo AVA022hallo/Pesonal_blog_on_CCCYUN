@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1>上智下愚</h1>
+            #
+这事的讽刺之处在于——断定别人<a href="https://www.zhihu.com/search?q=%E6%84%9A%E6%98%A7&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2601187299%7D">愚昧</a>，是无知的结果。
+世界上根本没有愚昧这回事。</p>
+<p>再解释一下吧：
+每一种被称为“愚昧”的表现，其实都存在另一个更精确和中性的表述。例如——“知识积累不足”，“欠缺学习主动性”，“低态满足”，“<a href="https://www.zhihu.com/search?q=%E5%A5%BD%E5%A5%87%E5%BF%83&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2601187299%7D">好奇心</a>缺失”……等等等等。这些表述同样可以表达各种各样被混为一谈称为“愚昧”的现象。但是为什么人们会热衷于使用“愚昧”来“一言以蔽之”？
+因为人们悄无声息的通过这个选择在暗示几件事：
+第一，我不想付出进行这种辨别的思考成本。
+第二，我不想付出这些表述所带来的解释成本。
+第三，我不想失去这一表述所带来的快感。
+第四，我不想失去这一表述所带来的权力。
+唯上智与下愚不移嘛，我既然称你为愚，我自然居于你上。“愚昧”之中，其实隐藏的是“我”的诸般好处，而用更精确的表述来替代它，对“我”是现吃亏，好处却落在你这一边。这才是“愚昧”的秘密。这个效应，近乎于在一切的<a href="https://www.zhihu.com/search?q=%E8%B4%AC%E4%B9%89%E8%AF%8D&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2601187299%7D">贬义词</a>身上都存在。
+对人要慎用——甚至基本禁用——这些描述。这都是些<a href="https://www.zhihu.com/search?q=%E6%9E%81%E5%88%91&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2601187299%7D">极刑</a>、绝罚，一言既出，对方和你在你的<a href="https://www.zhihu.com/search?q=%E4%BC%A6%E7%90%86%E6%84%8F%E8%AF%86&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2601187299%7D">伦理意识</a>上就不再是同一个社会物种了，你们之间的交往就不再合理、甚至不再可能了。
+<strong>宁可承担这个思考、表述、解释成本，抛弃由此可以带来的<a href="https://www.zhihu.com/search?q=%E6%9D%83%E5%8A%9B%E6%95%88%E5%BA%94&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2601187299%7D">权力效应</a>，也不给人定过逾的罪，此所以谓仁也。</strong>
+养成这个习惯，将来你自然会体会到什么叫<a href="https://www.zhihu.com/search?q=%E4%BB%81%E8%80%85%E6%97%A0%E6%95%8C&amp;search_source=Entity&amp;hybrid_search_source=Entity&amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2601187299%7D">仁者无敌</a>，得道多助。因此而客观上实现的影响力，要远大过使用这些词所得来的那些微不足道的利益。
+这是上帝点的赞。</p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

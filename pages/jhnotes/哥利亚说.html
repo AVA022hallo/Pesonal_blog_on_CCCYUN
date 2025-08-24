@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1>哥利亚说</h1>
+            #
+以强对弱，如果不是存在存亡矛盾、敌我对立之类的零和格局，而是一种娱乐性的、友好的、目的在于增进友谊的对抗，那么要采用一个友善的策略。
+什么策略呢？
+就是==创造机会，让对方发挥出ta自己都想象不到的高度，帮助对方对自己造成最大的威胁，然后自我挑战，看能不能在这个前提下应对这个挑战。==
+如果你擅长前场拦截，那么我就特意给你喂前场拦截的机会，让你把特长发挥到极限，我再试试我能不能应对你这个最强特技。
+但我肯定会全力以赴的尝试反击你的已经被强化过的特技，不会再在这个基础上故意示弱。
+让对方把自己最大的优势痛快的释放出来，而不是像对付敌人那样，事先封堵对方发挥优势的可能，把自己胜利的概率无条件的最大化。
+对方自我感觉优势已经尽情释放了，还是没能打赢你，对方的感觉就不是憋屈，屈辱，而是钦佩，折服。
+虽然输了，但是输得没话讲，心服口服。
+更不必说这样打，那些惊险的扑救、精妙的化解，足以让对方也拍案叫绝，念念不忘。这时对方虽然自己是失败的一方，但作为这些神之一手的发动者，自己也与有荣焉。
+而这样即使你真没救起来，甚至整局都输掉了，你自己也不会有什么屈辱和焦虑。
+对方完全可以为“击败了传说中的强手”欢欣鼓舞，而你又不必为“输给弱手深感屈辱”。
+如果对方体会不到这个心意呢？那你可以一笑置之——不是谁的天赋都会好到能意会到这种微妙处。真要能意会到这其中的微妙处，你自然会有知己之感。
+而如果对方为此洋洋得意甚至耀武扬威呢？那恭喜你，你很轻松就试出了对方的斤两——在学会正确评估实力前，此人虽可优容，但不可信托和依赖，因为ta做事容易失败。
+和那种打着“永远竭尽全力追求胜利”的旗号却采取侮辱性战术的策略去对比一下优劣：
+1）对方发现你是一个把胜利快感放在社会性快感之上的人，也就是一个社会行发育有缺陷、甚至可能是有反社会人格的人。
+最起码也是扣分，严重的话一次就扣到负分。
+2）万一你要是输了，你自己要受到严重的心理打击。
+不要以为你真的就万无一失。你可能不知道老天爷是个什么脾气——ta最大的爱好就是搞这种“哥利亚被大卫击毙”的戏码。
+而会走路线来榨取快感、还拿“比赛就要全力以赴”来遮掩的人恰恰是最输不起的，一旦要是被意外翻盘，会粉碎性精神骨折。
+运气不好，心理阴影半辈子都好不了，打谁都赢不了了。
+自己想清楚吧。</p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

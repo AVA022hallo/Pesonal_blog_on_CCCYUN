@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1>爱不思恶</h1>
+            #
+爱不思恶，并不意味着爱不思危。
+恰恰相反，爱是无时无刻不在居安思危的。
+从某种意义上说，爱就是庇护，就是提供安全。提供安全的前提是对安全有极其深刻的研究并对防御的艺术有精微缜密的认识和经验。
+每一个爱人的人，都必然是攻防大师，乃至于只是随和的站在那里，看似懒散随意，实则空门大开，实则渊渟岳峙，无懈可击。
+那不是漫不经心，而是胸有成竹的放松。
+因为一切常见的危险都已经被看见而有预防了，一切罕见的危险也都有深厚的承受力和凌厉的反击机制，而对最终不可抗拒的风险，也有了作为天命接受的坦然。
+看见了危险，就点破危险，按照“你应该是无意的，但希望你以后避免”来点破。
+一句“我相信你是无意的”，就在“我看到危险”和“你有恶意”之间建立了伦理墙。我看到危险这是客观的，我要阻断危险事态的发展是我天然的权利，不因为爱你而有任何折损，你爱我则意味着你对此不能有任何的抵触和反对。
+世上哪有不容人自我保护的爱？
+所以，我只要排除对你恶意的认定，就已经满足“爱不思恶”的要求。
+我不认为你是恶意的，但我不允许、不接受这种危险隐患继续存在。
+如果你有合理的理由认为是我超出了我的自由边界，对你形成了侵犯，请畅所欲言。但我先声明，我对你没有给我公平的提示就采取攻击行动的做法并不接受，你需要为此道歉。
+如果你并不能指出我越线之处，那么就请你停止继续制造我的风险，谢谢。
+<strong>如果你拒绝，或者你自己证实、承认、宣告你就是故意的，那么就不存在我思恶，而是你自己证了恶。</strong>
+我接受事实，也直面挑战，承担保护人间有爱者——这包括我自己——的天然责任，必定令这危险的到阻断和消除。
+我无伤你之意，也不为已甚，只会实施必要的最小程度的打击。但是根据你执意的程度，我可能被迫要将一定程度的威力震慑视为“必要打击”的一部分。
+你什么时候扛不住，请你早点告知，按照我给定的程序缴纳信用抵押走和解程序，按规定做事，我保证你没有后患，可以安心生活。
+你要坚持到底，我尊重你的选择，看天意让谁存活。如果幸存的是我，肯定祸不及无辜。
+如果你的子女放不下纠结，要为你复仇，我尽量开导，开导不了，那就还是按同一规则，你死我活，看谁幸存。
+That been said，我现在通知你，这个行为造成了我的安全顾虑，我相信你的无意的。请告诉我——我是不是没猜错？如果你是故意的，那么请问你绕开合法途径对我擅用私刑的理由是什么？
+请你仔细想好后从容回答，相信我，这对你很重要。
+如果我是你，会先做遗嘱公证。</p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

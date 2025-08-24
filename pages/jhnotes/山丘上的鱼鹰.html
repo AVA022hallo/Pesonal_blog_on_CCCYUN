@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1>山丘上的鱼鹰</h1>
+            #
+恰恰相反，你要备考研究生，要的就是“和社会脱节”，去他娘的“与社会的良性互动”
+你在怕什么?
+怕有新梗追不上?怕核战要爆发了来不及跑?
+怕被人遗忘?
+认准了值得下的苦工，确认了无论世界如何变迁，这项资产都足以提升你对一切变化的适应力，那么就果断的相信自己判断，减少干扰。
+与其“保持与社会的良性互动”，不如==研究下自己的日常食谱、健身计划、研习规划。==
+==生活中的要素越少，生活方式就越稳固安宁少有焦虑，更容易集中精力提升能力。==今天跟这个聊哎呀家里闹情绪，明天跟那个聊哎呀女朋友要分手，后天跟张三聊哎呀跟张三有误会，后天跟李四吃饭哎呀还要考虑啥时候会请。早上刷视频哎呀ai会生图了，学素描还有意义吗?晚上刷新闻哎呀要收关税了，学英语还有用吗?
+那还学个屁啊。
+不要以“脱离社会”为耻。
+要以“过度沉浸社会”为耻。
+这么说吧，==真正的高强，是在社会上空判断监视，社会伸手够不着ta，而ta可以随时俯冲轰炸社会。==
+==这是一种主动和社会保持距离，但却保持对社会的观察和管制的状态。==
+进退要掌握在自己手里，而不是“社会”手里要像鱼鹰一样，看见有鱼再入水捕食，捕到了又可以离水飞去，而不要像鱼一样离开水就活不了。
+要敢于孤独，善于孤独，敢于住在城边的山丘上，而不要因为恐惧不敢追寻野外的财富。
+脱离社会”没有你想的那么可怕，一无所长一无所得才是你真正需要纠结的问题。
+其实你仔细想想，为什么那么多人喜欢看穿越小说?
+你发现没有--穿越者们正是完完全全“脱离了社会”的人，不是吗?
+为什么你们自我代入穿越者，不但不会恐惧反而会很兴奋?
+不正是因为穿越者带着超越时代的知识和技能，即使穿越到一个自己完全没有亲朋好友甚至对时事世情两眼一抹黑、连语言都不太通的、甚至是兵荒马乱人命如草的、和自己完全脱节的社会里，仍然有巨大的乐观预期吗?
+这不正是因为穿越者身负的技能和知识，即使遇到这种极端情况也凛然不惧吗?
+所以你为什么要如此害怕“因为闭关修炼而与社会脱节”?</p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>

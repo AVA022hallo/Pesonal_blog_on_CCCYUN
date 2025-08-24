@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人博客 - 关于我</title>
+
+    <!-- 引入主样式 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 引入布局样式 -->
+    <link rel="stylesheet" href="../../css/layout.css">
+
+    <!-- 引入主题样式 -->
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <!-- 引入about样式 -->
+    <link rel="stylesheet" href="jhnotes.css"> 
+</head>
+<body>
+    <!-- 动态加载头部 -->
+    <div id="header"></div>
+
+    <div class="container">
+        <!-- 动态加载侧边栏 -->
+        <div id="sidebar"></div>
+        <!-- 主页内容 -->
+        <main>
+            <h1>寡人有疾</h1>
+            #
+如果你需要“寻找合伙人”才能创建企业，那么建议你整个的不要启动。
+这应该是在创建企业之前先就已经解决的问题。也就是先已经有了值得信任的人，然后再看这几个人的资源天赋能做什么。
+如果你没有这样的人，是你自己有某个核心天赋或者资源，你只是觉得势单力孤，要拉几个熟人进来给自己壮胆，又手头没钱给人支付足额工资，所以想要用股权或者期权来达成目的，那么劝你不要启动。
+因为在这种情况下，你的正确选择是克服自己的软弱，磨掉对这种“壮胆”的需求，战胜“孤家寡人”的恐惧，然后凭着实力贷款实现优秀的服务，凭着正现金流去给专业人发足额工资，以便于作为权力地位完整坚固的老板和领袖来和下属相处。
+孤独和恐惧是不能用人填补的，更不能用所谓的“股份”来引诱人填补。这种做法根本经受不起创业很难不承受的巨大压力，尤其问题巨大的是恰恰是压力最大的时候，这些毫无收益、自己都还需要别人来帮助抚平恐惧的拐杖最容易提出离开，让你在最不能承受恐惧的时候受到更大的恐惧，直接导致你在陷阱的正上方踏空。
+当然不如不开始。
+先有久经考验的团队——这是指已经共过患难的那种——那就以合伙形式考虑最大效率发挥团队天赋的创业。
+没有这样的团队又没有做孤家寡人的觉悟，从一开始就不要考虑以合伙人的形式强凑。
+在这种条件下，你只能考虑自己做孤家寡人，然后以雇佣形式组建团队，这不叫合伙人。</p>
+
+        </main>
+    </div>
+
+    <!-- 动态加载尾部 -->
+    <div id="footer"></div>
+
+    <script>
+        // 加载头部
+        fetch('../partials/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // 加载侧边栏
+        fetch('../partials/sidebar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('sidebar').innerHTML = data);
+
+        // 加载尾部
+        fetch('../partials/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>
